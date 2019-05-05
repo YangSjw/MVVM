@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <div id="box">
+        <!-- <input type="text" v-model="brotherMsg.msg"> -->
+        <input type="text" v-model="inpVal">
+        <div>{{inpVal}}</div>
+        {{brotherMsg.msg}}
+    </div>
+    <script src="./mvvm.js"></script>
+    <!-- <script src="./a.js"></script> -->
+    <script>
+        new Mvvm({
+            el: 'box',
+            data: {
+                inpVal: '小狗子，你在哪？',
+                brotherMsg: {
+                    msg: '我在这！'
+                }
+            }
+        })
+    </script>
+</body>
+</html>
